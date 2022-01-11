@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const CustomerData = ({ customer }) => {
+  if (!customer) {
+    return <Navigate to="/404" />;
+  }
   return (
     <div className="one-trip">
       <p>{customer.name}</p>

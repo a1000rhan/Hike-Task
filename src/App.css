@@ -1,6 +1,5 @@
 .image {
   width: 200px;
-  text-align: ce;
 }
 
 .continers {
@@ -9,12 +8,83 @@
   text-align: center;
   margin: 20px;
 }
-.one-trip {
+.search-bar {
+  margin: 20px;
+}
+.detail {
+  border-radius: 20px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
+  text-align: center;
   border: 4px solid #000;
   background-color: cornsilk;
+  transition: 0.3s;
+  width: 100%;
 }
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.one-trip {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  border: 4px solid #000;
+  background-color: cornsilk;
+  transition: 0.3s;
+  width: 300px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.one-trip:hover {
+  width: 320px;
+}
+
 .contents {
   text-align: center;
+}
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+}
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: #ffffff;
+  border: 5px solid #3774ff;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+.example-thumb.active {
+  background-color: grey;
+}
+.example-track {
+  position: relative;
+  background: #ddd;
+}
+.example-track.example-track-0 {
+  background: #83a9ff;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 4px;
+}
+.horizontal-slider .example-thumb {
+  top: 12px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}
+.slider {
+  height: 30px;
+  display: flex;
+  justify-content: center;
 }

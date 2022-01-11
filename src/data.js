@@ -7,7 +7,7 @@ const customers = [
       "https://wildlandtrekking.com/content/uploads/2020/03/secret-mtn-slides2.jpg",
     city: "Sedona, AZ",
     difficulty: "medium",
-    length: 10,
+    length: 20,
     rating: 2,
   },
   {
@@ -17,7 +17,7 @@ const customers = [
     image:
       "https://wildlandtrekking.com/content/uploads/2020/02/gcc-slides8.jpg",
     city: "FLAGSTAFF, AZ ",
-    difficulty: "hard",
+    difficulty: "easy",
     length: 20,
     rating: 5,
   },
@@ -28,7 +28,7 @@ const customers = [
     image: "https://www.1000rhan.com/image/IMG_8721.jpg",
     city: "Chicago, IL",
     difficulty: "easy",
-    length: 15,
+    length: 45,
     rating: 4,
   },
   {
@@ -39,7 +39,7 @@ const customers = [
       "https://wildlandtrekking.com/content/uploads/2020/03/death-valley-classic-2.jpg",
     city: "LAS VEGAS, NV",
     difficulty: "hard",
-    length: 9,
+    length: 55,
     rating: 3,
   },
   {
@@ -50,7 +50,7 @@ const customers = [
       "https://wildlandtrekking.com/content/uploads/2020/03/rmnpsnowshoe-slides7.jpg",
     city: "ESTES PARK, CO",
     difficulty: "medium",
-    length: 22,
+    length: 24,
     rating: 1,
   },
   {
@@ -63,6 +63,17 @@ const customers = [
     difficulty: "medium",
     length: 10,
     rating: 5,
+  },
+  {
+    id: 7,
+    name: "LOST COAST TREK",
+    slug: "lost-coast-trek",
+    image:
+      "https://wildlandtrekking.com/content/uploads/2020/03/lost-coast-slides7.jpg",
+    city: "SACRAMENTO, CA",
+    difficulty: "hard",
+    length: 25,
+    rating: 4,
   },
 ];
 export default customers;

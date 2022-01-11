@@ -9,7 +9,8 @@ const SearchBar = ({ setQuery }) => {
 
   return (
     <input
-      onChange={(event) => checkLength(event.target.value)} //Cu
+      className="search-bar"
+      onChange={(event) => checkLength(event.target.value)}
       placeholder="Search for a name"
     />
   );
