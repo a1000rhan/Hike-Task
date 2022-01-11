@@ -3,9 +3,8 @@ import { useState } from "react";
 import customers from "../data";
 import CustomerData from "./CustomerData";
 import SearchBar from "./SearchBar";
-import { Navigate } from "react-router-dom";
 
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -27,7 +26,7 @@ const Home = () => {
     })
     .map((customer) => <CustomerData customer={customer} />);
   if (!customerList) {
-    return <Navigate to={"/404"} />;
+    return <Navigate to="/404" />;
   }
   return (
     <div>
