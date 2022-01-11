@@ -3,6 +3,7 @@ import { useState } from "react";
 import customers from "../data";
 import CustomerData from "./CustomerData";
 import SearchBar from "./SearchBar";
+import ReactSlider from "react-slider";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <div className="contents">
       <SearchBar setQuery={setQuery} />
+      <ReactSlider />
       <div className="continers">{customerList}</div>
     </div>
   );
