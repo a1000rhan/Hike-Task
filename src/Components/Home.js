@@ -7,9 +7,11 @@ import SearchBar from "./SearchBar";
 import { useParams, Navigate } from "react-router-dom";
 
 const Home = () => {
+  const { tripdiff } = useParams();
   const [query, setQuery] = useState("");
   const [slider, setSlider] = useState(0);
-  const [drop, setDrop] = useState("all");
+  const [drop, setDrop] = useState(tripdiff ? tripdiff : "all");
+
   const customerList = customers
     .filter(
       (customer) =>
@@ -24,10 +26,16 @@ const Home = () => {
         return drop;
       }
     })
+
     .map((customer) => <CustomerData customer={customer} />);
   if (!customerList) {
     return <Navigate to="/404" />;
   }
+  const diffDropList = (e) => {
+    setDrop(e);
+    return <Navigate to={`/${e}`} />;
+  };
+  console.log(tripdiff);
   return (
     <div>
       <div className="contents">
@@ -47,7 +55,7 @@ const Home = () => {
         <select
           name="difficulty"
           id="difficulty"
-          onChange={(e) => setDrop(e.target.value)}
+          onChange={(e) => diffDropList(e.target.value)}
         >
           <option value="all">All</option>
           <option value="easy">Easy</option>

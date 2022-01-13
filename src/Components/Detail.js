@@ -1,16 +1,19 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import customers from "../data";
 import CustomerData from "./CustomerData";
 
 function Detail() {
   const { customerslug } = useParams();
   const trips = customers.find((trip) => trip.slug === customerslug);
-
+  if (!trips) {
+    return <Navigate to=" /404" />;
+  }
   const recommended = customers
     .filter((reco) => reco.difficulty === trips.difficulty)
     .map((trip) => <CustomerData customer={trip} />);
+
   return (
     <div>
       <div className="detail">
